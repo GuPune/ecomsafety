@@ -55,6 +55,21 @@
             Shop
         </div>
 
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#groupCollapse" aria-expanded="true" aria-controls="groupCollapse">
+            <i class="fas fa-sitemap"></i>
+            <span>Group</span>
+        </a>
+        <div id="groupCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Category Options:</h6>
+                <a class="collapse-item" href="<?php echo e(route('category.index')); ?>">Group</a>
+                <a class="collapse-item" href="<?php echo e(route('category.create')); ?>">Add Group</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Categories -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#categoryCollapse" aria-expanded="true" aria-controls="categoryCollapse">
@@ -128,7 +143,7 @@
             <i class="fas fa-comments"></i>
             <span>Reviews</span></a>
     </li>
-    
+
 
     <!-- Divider -->
     <!-- Visit 'codeastro' for more projects -->
@@ -222,4 +237,5 @@
       <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
-</ul><?php /**PATH C:\laragon\www\Ecommerce-Laravel\resources\views/backend/layouts/sidebar.blade.php ENDPATH**/ ?>
+</ul>
+<?php /**PATH C:\laragon\www\Ecommerce-Laravel\resources\views/backend/layouts/sidebar.blade.php ENDPATH**/ ?>
