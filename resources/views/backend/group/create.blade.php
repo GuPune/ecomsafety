@@ -41,9 +41,9 @@
 
         <div class="form-group">
           <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
-          <select name="status" class="form-control">
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
+          <select name="status" class="form-control" id="status">
+              <option value="Y">Active</option>
+              <option value="N">Inactive</option>
           </select>
           @error('status')
           <span class="text-danger">{{$message}}</span>

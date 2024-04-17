@@ -59,10 +59,26 @@
 
 
         <div class="row">
-            @php
+
+            @if($group)
+            @foreach($group as $data)
+        
+           <div class="col-lg-3 col-md-6 col-12">
+            <div class="single-banner">
+                @if($data->image)
+                    <img src="{{$data->image}}" alt="{{$data->image}}">
+                @else
+                    <img src="https://via.placeholder.com/600x370" alt="#">
+                @endif
+                
+            </div>
+        </div>
+            @endforeach
+            @endif
+            {{-- @php
             $category_lists=DB::table('categories')->where('status','active')->limit(8)->get();
-            @endphp
-            @if($category_lists)
+            @endphp --}}
+            {{-- @if($category_lists)
                 @foreach($category_lists as $cat)
                     @if($cat->is_parent==1)
                         <!-- Single Banner  -->
@@ -79,7 +95,7 @@
                     @endif
                     <!-- /End Single Banner  -->
                 @endforeach
-            @endif
+            @endif --}}
         </div>
     </div>
 </section>

@@ -63,9 +63,9 @@
         </a>
         <div id="groupCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Category Options:</h6>
-                <a class="collapse-item" href="<?php echo e(route('category.index')); ?>">Group</a>
-                <a class="collapse-item" href="<?php echo e(route('category.create')); ?>">Add Group</a>
+                <h6 class="collapse-header">Group Options:</h6>
+                <a class="collapse-item" href="<?php echo e(route('group.index')); ?>">Group</a>
+                <a class="collapse-item" href="<?php echo e(route('group.create')); ?>">Add Group</a>
             </div>
         </div>
     </li>

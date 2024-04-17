@@ -174,7 +174,7 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
   <component name="PhpRuntimeConfiguration" default_stubs_path="C:\laragon\bin\php\php-7">
     <extensions>
       <extension name="FFI" enabled="true" />

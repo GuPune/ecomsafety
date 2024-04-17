@@ -34,6 +34,8 @@ class GroupController extends Controller
         //
 
 
+        
+
         return view('backend.group.create');
     }
 
@@ -46,6 +48,21 @@ class GroupController extends Controller
     public function store(Request $request)
     {
         //
+
+
+$savegruop = GroupShell::create([
+    "name_en" => $request->name_en,
+    "name_th" => $request->name_th,
+    "image" => $request->image,
+    "sequence" => 1,
+    "status" => $request->status,
+]);
+
+
+   
+        return redirect()->route('group.index')
+        ->with('success','Group  created successfully');
+        
     }
 
     /**

@@ -57,27 +57,24 @@
 
 
         <div class="row">
-            <?php
-            $category_lists=DB::table('categories')->where('status','active')->limit(8)->get();
-            ?>
-            <?php if($category_lists): ?>
-                <?php $__currentLoopData = $category_lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <?php if($cat->is_parent==1): ?>
-                        <!-- Single Banner  -->
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="single-banner">
-                                <?php if($cat->photo): ?>
-                                    <img src="https://www.thaippe.com/new2017/images/thaippe/home/products.jpg" alt="<?php echo e($cat->photo); ?>">
-                                <?php else: ?>
-                                    <img src="https://via.placeholder.com/600x370" alt="#">
-                                <?php endif; ?>
-                                
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <!-- /End Single Banner  -->
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+            <?php if($group): ?>
+            <?php $__currentLoopData = $group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        
+           <div class="col-lg-3 col-md-6 col-12">
+            <div class="single-banner">
+                <?php if($data->image): ?>
+                    <img src="<?php echo e($data->image); ?>" alt="<?php echo e($data->image); ?>">
+                <?php else: ?>
+                    <img src="https://via.placeholder.com/600x370" alt="#">
+                <?php endif; ?>
+                
+            </div>
+        </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <?php endif; ?>
+            
+            
         </div>
     </div>
 </section>

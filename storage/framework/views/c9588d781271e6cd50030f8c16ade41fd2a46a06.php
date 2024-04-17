@@ -2,7 +2,7 @@
 <?php $__env->startSection('main-content'); ?>
 
 <div class="card">
-    <h5 class="card-header">Add Brand</h5>
+    <h5 class="card-header">Add Group</h5>
     <div class="card-body">
       <form method="post" action="<?php echo e(route('group.store')); ?>" id="myForm"  >
         <?php echo e(csrf_field()); ?>
@@ -48,9 +48,9 @@ unset($__errorArgs, $__bag); ?>
 
         <div class="form-group">
           <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
-          <select name="status" class="form-control">
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
+          <select name="status" class="form-control" id="status">
+              <option value="Y">Active</option>
+              <option value="N">Inactive</option>
           </select>
           <?php $__errorArgs = ['status'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
