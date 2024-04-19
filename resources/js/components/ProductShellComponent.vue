@@ -12,7 +12,7 @@
           class="mb-3"
         ></b-form-select> -->
 
-{{ objectscate }}
+{{ cate }}
         <b-form-select v-model="selected"  v-on:change="changeshell($event)">
                         <option
                             v-for="(option, idx) in cate"
@@ -60,6 +60,7 @@
   
   <script>
      import { FETCH_PRODUCT,FETCH_PRODUCT_CATE } from "../../store/actions.type";
+     import { mapGetters,mapState } from "vuex";
     export default {
       data() {
         return {
