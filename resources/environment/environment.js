@@ -5,5 +5,5 @@
 // export const API_URL = 'https://cmsecom.idtest.work/';  //uat
 //export const API_URL = 'https://backoffice.thaionzon.com/'; // prod
 
- export const API_URL = 'http://train.trainingzenter.com/';  //uat
+ export const API_URL = 'http://train.trainingzenter.com/api/';  //uat
 
