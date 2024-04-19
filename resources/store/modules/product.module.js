@@ -1,6 +1,6 @@
 import { ProductService } from "../../services/product.service";
 import { FETCH_PRODUCT,FETCH_PRODUCT_CATE } from "../actions.type";
-import { SET_CATE,SET_PRODUCTYSHELL,SET_PRODUCTINSHELL,SET_ITEM } from "../mutations.type";
+import { SET_CATE,SET_PRODUCTINSHELL,SET_ITEM } from "../mutations.type";
 
 const state = {
     categoryshell: null,
@@ -43,9 +43,7 @@ const actions = {
 
 const mutations = {
     
-    [SET_PRODUCTYSHELL](state, data) {
-        state.item = data;
-    },
+
 
     [SET_CATE](state, data) {
         state.cate = data;
