@@ -1,12 +1,13 @@
 import { ProductService } from "../../services/product.service";
 import { FETCH_PRODUCT,FETCH_PRODUCT_CATE } from "../actions.type";
-import { SET_CATEGORYSHELL,SET_PRODUCTYSHELL,SET_PRODUCTINSHELL,SET_ITEM } from "../mutations.type";
+import { SET_CATE,SET_PRODUCTYSHELL,SET_PRODUCTINSHELL,SET_ITEM } from "../mutations.type";
 
 const state = {
     categoryshell: null,
     item:[],
     itempos:[],
-    itemsinshell:[]
+    itemsinshell:[],
+    cate:[]
 };
 
 const getters = {
@@ -32,8 +33,8 @@ const actions = {
     },
     async [FETCH_PRODUCT_CATE](context) {
         const { data } = await ProductService.categoryshell();
-        console.log(data);
-      return data
+        context.commit(SET_CATE, data.data);
+        return data.data;
     },
     
 
@@ -44,6 +45,10 @@ const mutations = {
     
     [SET_PRODUCTYSHELL](state, data) {
         state.item = data;
+    },
+
+    [SET_CATE](state, data) {
+        state.cate = data;
     },
    
     
