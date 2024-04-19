@@ -25,7 +25,6 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 
-ApiService.init();
 
 Vue.filter('formatNumber', (value) => {
     return parseInt(value).toLocaleString()
