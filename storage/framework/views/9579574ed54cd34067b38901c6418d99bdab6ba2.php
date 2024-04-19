@@ -66,6 +66,7 @@
                 <h6 class="collapse-header">Group Options:</h6>
                 <a class="collapse-item" href="<?php echo e(route('group.index')); ?>">Group</a>
                 <a class="collapse-item" href="<?php echo e(route('group.create')); ?>">Add Group</a>
+                <a class="collapse-item" href="<?php echo e(route('groupshell.index')); ?>">Product Group</a>
             </div>
         </div>
     </li>

@@ -40,8 +40,8 @@
                         <?php endif; ?>
                     </td>
                     <td>
-                        <a href="<?php echo e(route('brand.edit',$brand->id)); ?>" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
-                        <form method="POST" action="<?php echo e(route('brand.destroy',[$brand->id])); ?>">
+                        <a href="<?php echo e(route('group.edit',$brand->id)); ?>" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
+                        <form method="POST" action="<?php echo e(route('group.destroy',[$brand->id])); ?>">
                           <?php echo csrf_field(); ?>
                           <?php echo method_field('delete'); ?>
                               <button class="btn btn-danger btn-sm dltBtn" data-id=<?php echo e($brand->id); ?> style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>

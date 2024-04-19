@@ -16,5 +16,6 @@ class GroupShell extends Model
         'name_th',
         'image',
         'sequence',
+        'status',
     ];
 }

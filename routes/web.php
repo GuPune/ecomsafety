@@ -103,6 +103,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::resource('users','UsersController');
     // Group
     Route::resource('group','GroupController');
+ // Group Shell
+    Route::resource('groupshell','GroupShellController');
     //
     Route::resource('banner','BannerController');
     // Brand

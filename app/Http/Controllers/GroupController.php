@@ -53,7 +53,7 @@ class GroupController extends Controller
 $savegruop = GroupShell::create([
     "name_en" => $request->name_en,
     "name_th" => $request->name_th,
-    "image" => $request->image,
+    "image" => $request->photo,
     "sequence" => 1,
     "status" => $request->status,
 ]);
@@ -85,6 +85,10 @@ $savegruop = GroupShell::create([
     public function edit($id)
     {
         //
+
+        $group = GroupShell::find($id);
+
+        return view('backend.group.edit')->with('brand',$group);
     }
 
     /**
@@ -97,6 +101,18 @@ $savegruop = GroupShell::create([
     public function update(Request $request, $id)
     {
         //
+
+   
+
+        $group= GroupShell::find($id);
+        $group->name_en = $request->name_en;
+        $group->name_th = $request->name_th;
+        $group->image = $request->photo;
+        $group->status = $request->status;
+        $group->save();
+
+        return redirect()->route('group.index')
+            ->with('success','Group  Update successfully');
     }
 
     /**
@@ -108,5 +124,11 @@ $savegruop = GroupShell::create([
     public function destroy($id)
     {
         //
+
+        $order= GroupShell::find($id);
+   
+            $status=$order->delete();
+            return redirect()->route('group.index')
+            ->with('success','Group  delete successfully');
     }
 }

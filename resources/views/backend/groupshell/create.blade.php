@@ -1,56 +1,57 @@
 @extends('backend.layouts.master')
-@section('title','Ecommerce Laravel || Brand Edit')
+@section('title','Ecommerce Laravel || Brand Create')
 @section('main-content')
 
 <div class="card">
-    <h5 class="card-header">Edit Group</h5>
+    <h5 class="card-header">Add Group</h5>
     <div class="card-body">
-      <form method="post" action="{{route('group.update',$brand->id)}}"  id="myForm">
-        @csrf 
-        @method('PATCH')
-
+      <form method="post" action="{{route('group.store')}}" id="myForm"  >
+        {{csrf_field()}}
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Name En <span class="text-danger">*</span></label>
-        <input id="name_en" type="text" name="name_en" placeholder="Enter Name En"  value="{{$brand->name_en}}" class="form-control">
-
-        <span class="text-danger" id="span_hide_en" >Name Validation</span>
+        <input id="name_en" type="text" name="name_en" placeholder="Enter Name En"  value="{{old('title')}}" class="form-control">
+            <span class="text-danger" id="span_hide_en" >Name Validation</span>
         </div>
 
           <div class="form-group">
               <label for="inputTitle" class="col-form-label">Name Th <span class="text-danger">*</span></label>
-              <input id="name_th" type="text" name="name_th"  placeholder="Enter Name Th"  value="{{$brand->name_th}}" class="form-control">
+              <input id="name_th" type="text" name="name_th"  placeholder="Enter Name Th"  value="{{old('title')}}" class="form-control">
+              @error('title')
+              <span class="text-danger">{{$message}}</span>
+              @enderror
 
               <span class="text-danger" id="span_hide" >Name Validation</span>
           </div>
-        
-          <div class="form-group">
-            <label for="inputPhoto" class="col-form-label">Photo</label>
-            <div class="input-group">
-            <span class="input-group-btn">
-                <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                <i class="fa fa-picture-o"></i> Choose
-                </a>
-            </span>
-                <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$brand->image}}">
-            </div>
-            <div id="holder" style="margin-top:15px;max-height:100px;"></div>
 
-            <span class="text-danger" id="span_hide_image" >Image Validation</span>
-        </div>
+          <div class="form-group">
+              <label for="inputPhoto" class="col-form-label">Photo</label>
+              <div class="input-group">
+              <span class="input-group-btn">
+                  <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                  <i class="fa fa-picture-o"></i> Choose
+                  </a>
+              </span>
+                  <input id="thumbnail" class="form-control" type="text" name="photo" value="{{old('photo')}}">
+              </div>
+              <div id="holder" style="margin-top:15px;max-height:100px;"></div>
+
+              <span class="text-danger" id="span_hide_image" >Name Validation</span>
+          </div>
+
 
         <div class="form-group">
           <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
-          <select name="status" class="form-control">
-            <option value="Y" {{(($brand->status=='Y') ? 'selected' : '')}}>Active</option>
-            <option value="N" {{(($brand->status=='N') ? 'selected' : '')}}>Inactive</option>
+          <select name="status" class="form-control" id="status">
+              <option value="Y">Active</option>
+              <option value="N">Inactive</option>
           </select>
           @error('status')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
         <div class="form-group mb-3">
-   
-           <button class="btn btn-success" type="button"  id="validateButton">Update</button>
+          <button type="reset" class="btn btn-warning">Reset</button>
+           <button class="btn btn-success" type="button"  id="validateButton">Submit</button>
         </div>
       </form>
     </div>
@@ -59,16 +60,20 @@
 @endsection
 
 @push('styles')
-<link rel="stylesheet" href="{{asset('backend/summernote/summernote.min.css')}}">
+
+
+
+
+
 @endpush
 @push('scripts')
 <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script src="{{asset('backend/summernote/summernote.min.js')}}"></script>
 <script>
-
     $('#span_hide').hide();
     $('#span_hide_en').hide();
     $('#span_hide_image').hide();
+
     $('#lfm').filemanager('image');
 
     $(document).ready(function() {
@@ -78,7 +83,6 @@
         height: 150
     });
     });
-
 
     document.getElementById('validateButton').onclick = function() {
         // Perform client-side validation here

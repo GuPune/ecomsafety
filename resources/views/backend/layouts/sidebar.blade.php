@@ -66,6 +66,7 @@
                 <h6 class="collapse-header">Group Options:</h6>
                 <a class="collapse-item" href="{{route('group.index')}}">Group</a>
                 <a class="collapse-item" href="{{route('group.create')}}">Add Group</a>
+                <a class="collapse-item" href="{{route('groupshell.index')}}">Product Group</a>
             </div>
         </div>
     </li>
