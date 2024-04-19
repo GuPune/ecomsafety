@@ -1,5 +1,5 @@
 import { ProductService } from "../../services/product.service";
-import { FETCH_PRODUCT } from "../actions.type";
+import { FETCH_PRODUCT,FETCH_PRODUCT_CATE } from "../actions.type";
 import { SET_CATEGORYSHELL,SET_PRODUCTYSHELL,SET_PRODUCTINSHELL,SET_ITEM } from "../mutations.type";
 
 const state = {
@@ -27,10 +27,15 @@ const getters = {
 const actions = {
     async [FETCH_PRODUCT](context) {
         const { data } = await ProductService.get();
-        console.log(data);
       
+      return data
     },
-   
+    async [FETCH_PRODUCT_CATE](context) {
+        const { data } = await ProductService.categoryshell();
+        console.log(data);
+      return data
+    },
+    
 
 
 };

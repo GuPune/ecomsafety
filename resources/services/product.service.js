@@ -5,7 +5,7 @@ export const ProductService = {
       return ApiService.get("productshell");
     },
     categoryshell() {
-        return ApiService.get("categoryshell");
+        return ApiService.get("category");
     },
     productshell(param) {
 

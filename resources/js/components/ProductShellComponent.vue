@@ -48,7 +48,7 @@
   </template>
   
   <script>
-     import { FETCH_PRODUCT } from "../../store/actions.type";
+     import { FETCH_PRODUCT,FETCH_PRODUCT_CATE } from "../../store/actions.type";
     export default {
       data() {
         return {
@@ -67,7 +67,10 @@
 
         async mounted() {
             let product = await this.$store.dispatch(FETCH_PRODUCT);
+            let cate = await this.$store.dispatch(FETCH_PRODUCT_CATE);
             this.items = product;
+            this.cate = cate;
+            console.log(this.cate);
         },
 
       methods: {
