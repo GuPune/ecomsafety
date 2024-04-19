@@ -1,4 +1,4 @@
-import ApiService from "@services/api.service";
+import ApiService from "../api.service";
 
 export const ProductService = {
     get() {
