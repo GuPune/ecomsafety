@@ -18,8 +18,8 @@
                             v-for="(option, idx) in options"
                             :key="idx"
                             :value="option.id"
-                            :title="option.name_en || null">
-                            {{ option.name_en }}
+                            :title="option.title || null">
+                            {{ option.title }}
                         </option>
                     </b-form-select>
       </b-form-group>
