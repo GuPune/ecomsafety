@@ -5,12 +5,23 @@
         label-for="table-select-mode-select"
         label-cols-md="4"
       >
-        <b-form-select
+        <!-- <b-form-select
           id="table-select-mode-select"
           v-model="selectMode"
           :options="modes"
           class="mb-3"
-        ></b-form-select>
+        ></b-form-select> -->
+
+
+        <b-form-select v-model="selected"  v-on:change="changeshell($event)">
+                        <option
+                            v-for="(option, idx) in options"
+                            :key="idx"
+                            :value="option.id"
+                            :title="option.name_en || null">
+                            {{ option.name_en }}
+                        </option>
+                    </b-form-select>
       </b-form-group>
   
       <b-table
@@ -69,8 +80,8 @@
             let product = await this.$store.dispatch(FETCH_PRODUCT);
             let cate = await this.$store.dispatch(FETCH_PRODUCT_CATE);
             this.items = product;
-            this.cate = cate;
-            console.log(this.cate);
+            this.options = cate;
+           
         },
 
       methods: {
