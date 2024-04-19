@@ -11,10 +11,15 @@ class GroupShellController extends Controller
 
     public function index()
     {
+        $group = GroupShell::orderBy('id','DESC')->paginate();
+        return view('backend.groupshell.index')->with('groups',$group);
 
+    }
 
-
-        return view('backend.groupshell.index');
+    public function edit($id)
+    {
+        $group = GroupShell::find($id);
+        return view('backend.groupshell.edit');
     }
 
 }

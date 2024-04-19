@@ -8,22 +8,126 @@
             @include('backend.layouts.notification')
          </div>
      </div>
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary float-left">Group List</h6>
+      <a href="{{route('group.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Group</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        @if(count($groups)>0)
+        <table class="table table-bordered table-hover" id="banner-dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name En</th>
+              <th>Name Th</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($groups as $brand)
 
-     <div id='app'>
-      <example-component/>
 
-  </div>
-  
-    
-  
+                <tr>
+                    <td>{{$brand->id}}</td>
+                    <td>{{$brand->name_en}}</td>
+                    <td>{{$brand->name_th}}</td>
+                    <td>
+                        @if($brand->status=='Y')
+                            <span class="badge badge-success">ใช้งาน</span>
+                        @else
+                            <span class="badge badge-warning">ปิด</span>
+                        @endif
+                    </td>
+                    <td>
+                        <a href="{{route('groupshell.edit',$brand->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="ADD PRODUCT" data-placement="bottom"><i class="fas fa-edit"></i></a>
+                       
+                    </td>
+
+                </tr>
+            @endforeach
+          </tbody>
+        </table>
+        <span style="float:right">{{$groups->links()}}</span>
+        @else
+          <h6 class="text-center">No Group found!!! Please create Group</h6>
+        @endif
+      </div>
+    </div>
 </div>
-
-<link href="https://unpkg.com/bootstrap-vue@2.15.0/dist/bootstrap-vue.css" rel="stylesheet" />
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-<link href="https://unpkg.com/bootstrap-vue@2.15.0/dist/bootstrap-vue.css" rel="stylesheet" />
-<script defer src="{{ mix('js/app.js') }}"></script>
 @endsection
 
+@push('styles')
+  <link href="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+  <style>
+      div.dataTables_wrapper div.dataTables_paginate{
+          display: none;
+      }
+      .zoom {
+        transition: transform .2s; /* Animation */
+      }
 
+      .zoom:hover {
+        transform: scale(3.2);
+      }
+  </style>
+@endpush
+
+@push('scripts')
+
+  <!-- Page level plugins -->
+  <script src="{{asset('backend/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="{{asset('backend/js/demo/datatables-demo.js')}}"></script>
+  <script>
+
+      $('#banner-dataTable').DataTable( {
+            "columnDefs":[
+                {
+                    "orderable":false,
+                    "targets":[3,4]
+                }
+            ]
+        } );
+
+        // Sweet alert
+
+        function deleteData(id){
+
+        }
+  </script>
+  <script>
+      $(document).ready(function(){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+          $('.dltBtn').click(function(e){
+            var form=$(this).closest('form');
+              var dataID=$(this).data('id');
+              // alert(dataID);
+              e.preventDefault();
+              swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this data!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                       form.submit();
+                    } else {
+                        swal("Your data is safe!");
+                    }
+                });
+          })
+      })
+  </script>
+@endpush

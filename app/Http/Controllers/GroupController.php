@@ -84,10 +84,7 @@ $savegruop = GroupShell::create([
      */
     public function edit($id)
     {
-        //
-
         $group = GroupShell::find($id);
-
         return view('backend.group.edit')->with('brand',$group);
     }
 
