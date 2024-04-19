@@ -8,7 +8,12 @@
             @include('backend.layouts.notification')
          </div>
      </div>
-     <example-component/>
+
+     <div id='app'>
+      <example-component/>
+
+  </div>
+  
     
   
 </div>
