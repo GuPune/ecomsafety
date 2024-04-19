@@ -6,7 +6,7 @@
     <h5 class="card-header">Edit Group</h5>
     <div class="card-body">
       <div id='app'>
-        <example-component/>
+        <product-selectgroup-component/>
     </div>
      
     </div>
