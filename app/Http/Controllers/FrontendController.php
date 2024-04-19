@@ -10,6 +10,7 @@ use App\Models\Post;
 use App\Models\Cart;
 use App\Models\Brand;
 use App\Models\GroupShell;
+use App\Models\ProductShell;
 use App\User;
 use Auth;
 use Session;
@@ -57,6 +58,25 @@ class FrontendController extends Controller
         $product_detail= Product::getProductBySlug($slug);
         // dd($product_detail);
         return view('frontend.pages.product_detail')->with('product_detail',$product_detail);
+    }
+
+    public function productGroup($id){
+ 
+
+    $productsshell = ProductShell::where('group_shell_id',$id)->first();
+    $jsonData = $productsshell->product_id;
+    $dataArray = json_decode($jsonData, true);
+   
+    $datas = [];
+    foreach($dataArray as $key=>$value) {
+       $getproduct = Product::where('id',$value['id'])->first();
+       $datas[$key] = $getproduct;
+    }
+    $group = GroupShell::where('id',$id)->first();
+  
+
+    return view('frontend.pages.product_group')->with('product_group',$datas)->with('group_name',$group);
+    
     }
 
     public function productGrids(){

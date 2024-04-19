@@ -16,7 +16,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 <link href="https://unpkg.com/bootstrap-vue@2.15.0/dist/bootstrap-vue.css" rel="stylesheet" />
-
+<script defer src="<?php echo e(mix('js/app.js')); ?>"></script>
 <?php $__env->stopSection(); ?>
 
 

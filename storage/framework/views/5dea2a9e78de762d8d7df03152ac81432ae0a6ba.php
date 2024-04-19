@@ -60,15 +60,15 @@
 
             <?php if($group): ?>
             <?php $__currentLoopData = $group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        
            <div class="col-lg-3 col-md-6 col-12">
-            <div class="single-banner">
+            <div class="single-banner custom-pointer">
+                <a href="<?php echo e(route('product-group', $data->id)); ?>">
                 <?php if($data->image): ?>
-                    <img src="<?php echo e($data->image); ?>" alt="<?php echo e($data->image); ?>">
+                    <img src="<?php echo e($data->image); ?>" alt="<?php echo e($data->image); ?>" >
                 <?php else: ?>
                     <img src="https://via.placeholder.com/600x370" alt="#">
                 <?php endif; ?>
-                
+            </a>
             </div>
         </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -511,6 +511,10 @@
 
 <?php $__env->startPush('styles'); ?>
     <style>
+
+.custom-pointer {
+  cursor: pointer;
+}
         /* Banner Sliding */
         #Gslider .carousel-inner {
         background: #000000;

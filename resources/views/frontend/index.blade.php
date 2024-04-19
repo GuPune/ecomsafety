@@ -62,15 +62,15 @@
 
             @if($group)
             @foreach($group as $data)
-        
            <div class="col-lg-3 col-md-6 col-12">
-            <div class="single-banner">
+            <div class="single-banner custom-pointer">
+                <a href="{{route('product-group', $data->id)}}">
                 @if($data->image)
-                    <img src="{{$data->image}}" alt="{{$data->image}}">
+                    <img src="{{$data->image}}" alt="{{$data->image}}" >
                 @else
                     <img src="https://via.placeholder.com/600x370" alt="#">
                 @endif
-                
+            </a>
             </div>
         </div>
             @endforeach
@@ -549,6 +549,10 @@
 
 @push('styles')
     <style>
+
+.custom-pointer {
+  cursor: pointer;
+}
         /* Banner Sliding */
         #Gslider .carousel-inner {
         background: #000000;
