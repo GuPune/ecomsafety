@@ -4,25 +4,13 @@ import { SET_CATE,SET_PRODUCTINSHELL,SET_ITEM } from "../mutations.type";
 
 const state = {
     categoryshell: null,
-    item:[],
-    itempos:[],
-    itemsinshell:[],
     cate:[]
 };
 
 const getters = {
-    categoryshell: state => {
-        return state.categoryshell
-    },
-    item: state => {
-        return state.item
-    },
-    itemsinshell: state => {
-        return state.itemsinshell
-    },
-    itempos: state => {
-        return state.itempos
-    },
+    cate: state => {
+        return state.cate
+    }
 };
 
 const actions = {

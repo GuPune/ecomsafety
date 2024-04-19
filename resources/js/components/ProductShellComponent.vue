@@ -12,10 +12,10 @@
           class="mb-3"
         ></b-form-select> -->
 
-
+{{ objectscate }}
         <b-form-select v-model="selected"  v-on:change="changeshell($event)">
                         <option
-                            v-for="(option, idx) in options"
+                            v-for="(option, idx) in cate"
                             :key="idx"
                             :value="option.id"
                             :title="option.title || null">
@@ -72,16 +72,18 @@
       },
 
       computed: {
-           
+        ...mapState({
+                objectscate: state => state.Product.cate,
+            }),
+
+            ...mapGetters(["cate"])
 
         },
 
         async mounted() {
             let product = await this.$store.dispatch(FETCH_PRODUCT);
             let cate = await this.$store.dispatch(FETCH_PRODUCT_CATE);
-            this.items = product;
-            this.options = cate;
-           
+     
         },
 
       methods: {
