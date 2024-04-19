@@ -85,6 +85,10 @@
         },
 
       methods: {
+
+        async changeshell(event){
+                console.log(event);
+            },
         onRowSelected(items) {
           this.selected = items
         },
