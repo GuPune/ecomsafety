@@ -14,6 +14,7 @@
 
 {{ cate }}
         <b-form-select v-model="selected"  v-on:change="changeshell($event)">
+               <option :value="0">  ทั้งหมด</option>
                         <option
                             v-for="(option, idx) in cate"
                             :key="idx"
@@ -68,7 +69,7 @@
           fields: ['selected', 'isActive', 'age', 'first_name', 'last_name'],
           items: [],
           selectMode: 'multi',
-          selected: []
+          selected: 0
         }
       },
 
