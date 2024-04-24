@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\GroupShell;
 use Illuminate\Http\Request;
+use App\Models\ProductShell;
 
 
 
@@ -57,6 +58,12 @@ $savegruop = GroupShell::create([
     "sequence" => 1,
     "status" => $request->status,
 ]);
+
+$save= ProductShell::create([
+    "product_id" => '[]',
+    "group_shell_id" => $savegruop->id
+]);
+
 
 
    

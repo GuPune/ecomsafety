@@ -19,7 +19,7 @@ class GroupShellController extends Controller
     public function edit($id)
     {
         $group = GroupShell::find($id);
-        return view('backend.groupshell.edit');
+        return view('backend.groupshell.edit',compact('group'));
     }
 
 }

@@ -7,8 +7,13 @@ export const ProductService = {
     categoryshell() {
         return ApiService.get("category");
     },
+    productgroup(param) {
+        return ApiService.post("productgroup",param);
+    },
+    productgroupsave(param) {
+        return ApiService.post("productgroupsave",param);
+    },
     productshell(param) {
-
         return ApiService.post("productinshell",param);
     },
     updateproductshell(param) {
