@@ -64,16 +64,18 @@ class FrontendController extends Controller
  
 
     $productsshell = ProductShell::where('group_shell_id',$id)->first();
-    $jsonData = $productsshell->product_id;
-    $dataArray = json_decode($jsonData, true);
-   
     $datas = [];
-    foreach($dataArray as $key=>$value) {
-       $getproduct = Product::where('id',$value['id'])->first();
-       $datas[$key] = $getproduct;
-    }
     $group = GroupShell::where('id',$id)->first();
-  
+    if($productsshell){
+        $jsonData = $productsshell->product_id;
+        $dataArray = json_decode($jsonData, true);
+        foreach($dataArray as $key=>$value) {
+            $getproduct = Product::where('id',$value['id'])->first();
+            $datas[$key] = $getproduct;
+         }
+    }
+
+   
 
     return view('frontend.pages.product_group')->with('product_group',$datas)->with('group_name',$group);
     

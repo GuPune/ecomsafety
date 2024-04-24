@@ -12,7 +12,7 @@
           class="mb-3"
         ></b-form-select> -->
 
-{{ cate }}
+
         <b-form-select v-model="selected"  v-on:change="changeshell($event)">
                <option :value="0">  ทั้งหมด</option>
                         <option
