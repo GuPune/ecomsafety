@@ -27,11 +27,12 @@
     },
     "dependencies": {
         "laravel-echo": "^1.8.0",
+        "pusher-js": "^6.0.3",
         "vue-axios": "^3.2.5",
         "vue-chartjs": "^3.5.1",
         "vue-moment": "^4.1.0",
         "vue-sweetalert": "^0.1.18",
         "vue-sweetalert2": "^4.3.1",
-        "pusher-js": "^6.0.3"
+        "vuedraggable": "^2.24.3"
     }
 }

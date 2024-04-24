@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/productshell', [\App\Http\Controllers\API\ProductShellController::class, 'index']);
 Route::get('/category', [\App\Http\Controllers\API\ProductShellController::class, 'cate']);
 
+Route::post('/productgroup', [\App\Http\Controllers\API\ProductShellController::class, 'group']);
+Route::post('/productgroupsave', [\App\Http\Controllers\API\ProductShellController::class, 'productgroupsave']);
+
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

@@ -7,4 +7,4 @@
 
 //  export const API_URL = 'http://train.trainingzenter.com/api/';  //uat
 
- export const API_URL = 'http://127.0.0.1:8000/api/';  //uat
+export const API_URL = 'http://127.0.0.1:8000/api/';  //local

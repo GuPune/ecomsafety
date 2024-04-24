@@ -58,7 +58,7 @@ const actions = {
     async [SAVE_GROUP](context) {
 
     let save = {id:state.id,select_product:state.product_select};
-    const { data } = await ProductService.productgroupsa(save);
+    const { data } = await ProductService.productgroupsave(save);
     },
     
     
