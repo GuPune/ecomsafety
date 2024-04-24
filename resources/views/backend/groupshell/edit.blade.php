@@ -3,7 +3,7 @@
 @section('main-content')
 
 <div class="card">
-    <h5 class="card-header">Edit Group</h5>
+    <h5 class="card-header">Product To Group</h5>
     <div class="card-body">
       <div id='app'>
         <product-selectgroup-component/>

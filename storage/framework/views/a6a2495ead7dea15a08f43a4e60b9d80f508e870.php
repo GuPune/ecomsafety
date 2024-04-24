@@ -1,4 +1,4 @@
-<?php $__env->startSection('title','Ecommerce Laravel || Brand Page'); ?>
+<?php $__env->startSection('title','Ecommerce Laravel || Group Page'); ?>
 <?php $__env->startSection('main-content'); ?>
  <!-- DataTales Example -->
  <div class="card shadow mb-4">
