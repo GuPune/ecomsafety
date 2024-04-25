@@ -119,7 +119,7 @@
                                                 @php
                                                     $org=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <p class="price"><del class="text-muted">${{number_format($product->price,2)}}</del>   ${{number_format($org,2)}}  </p>                                                
+                                                <p class="price"><del class="text-muted">{{number_format($product->price,2)}}</del>   ${{number_format($org,2)}}  </p>                                                
                                             </div>
                                         </div>
                                         <!-- End Single Post -->
@@ -212,8 +212,8 @@
 																@php
 																	$after_discount=($product->price-($product->price*$product->discount)/100);
 																@endphp
-																<span>${{number_format($after_discount,2)}}</span>
-																<del>${{number_format($product->price,2)}}</del>
+																<span>{{number_format($after_discount,2)}} THB</span>
+																<del>{{number_format($product->price,2)}} THB</del>
 															</div>
 															<h3 class="title"><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
 														{{-- <p>{!! html_entity_decode($product->summary) !!}</p> --}}

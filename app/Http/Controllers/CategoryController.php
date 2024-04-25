@@ -51,9 +51,9 @@ class CategoryController extends Controller
         $data= $request->all();
         $slug=Str::slug($request->title);
         $count=Category::where('slug',$slug)->count();
-        if($count>0){
-            $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
-        }
+        
+        $slug = $slug.'-'.date('ymdis').'-'.rand(0,999);
+    
         $data['slug']=$slug;
         $data['is_parent']=$request->input('is_parent',0);
         // return $data;   
