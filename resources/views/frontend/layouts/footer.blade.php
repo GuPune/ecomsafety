@@ -22,7 +22,7 @@
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Information</h4>
+							<h4>ข้อมูลข่าวสาร</h4>
 							<ul>
 								<li><a href="{{route('about-us')}}">About Us</a></li>
 								<li><a href="#">Faq</a></li>
@@ -36,21 +36,23 @@
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Customer Service</h4>
+							<h4>อุปกรณ์เซฟตี้ที่จำหน่าย</h4>
 							<ul>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Money-back</a></li>
-								<li><a href="#">Returns</a></li>
-								<li><a href="#">Shipping</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">รองเท้าเซฟตี้</a></li>
+								<li><a href="#">หมวกเซฟตี้</a></li>
+								<li><a href="#">แว่นตาเซฟตี้</a></li>
+								<li><a href="#">เสื้อสะท้อนแสง</a></li>
+								<li><a href="#">อื่นๆ</a></li>
 							</ul>
+
+
 						</div>
 						<!-- End Single Widget -->
 					</div>
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
-							<h4>Get In Tuch</h4>
+							<h4>ติดต่อ</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
