@@ -59,7 +59,7 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="section-title-group">
+                <div class="section-title" style="margin-bottom: 5px;">
                     <h2>Group Item</h2>
                 </div>
             </div>
