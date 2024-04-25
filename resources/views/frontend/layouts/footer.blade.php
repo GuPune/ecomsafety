@@ -17,7 +17,7 @@
 							</div>
 						
 							<p class="text">@foreach($settings as $data) {{$data->short_des}} @endforeach</p>
-							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
+							<p class="call">ติดต่อได้ช่วงเวลา 09.00 - 17.00 <span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
 						</div>
 						<!-- End Single Widget -->
 					</div>
@@ -38,7 +38,7 @@
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>อุปกรณ์เซฟตี้ที่จำหน่าย</h4>
+							<h4>อุปกรณ์เซฟตี้</h4>
 							<ul>
 								<li><a href="#">รองเท้าเซฟตี้</a></li>
 								<li><a href="#">หมวกเซฟตี้</a></li>
