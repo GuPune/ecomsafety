@@ -60,7 +60,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title" style="margin-bottom: 5px;">
-                    <h2>Group Product</h2>
+                    <h2>กลุ่มประเภทสินค้า</h2>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>New Items</h2>
+                        <h2>สินค้าใหม่</h2>
                     </div>
                 </div>
             </div>
@@ -237,7 +237,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>Hot Item</h2>
+                    <h2>สินค้าขายดี</h2>
                 </div>
             </div>
         </div>
@@ -297,7 +297,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="shop-section-title">
-                            <h1>Latest Items</h1>
+                            <h1>สินค้าล่าสุด</h1>
                         </div>
                     </div>
                 </div>

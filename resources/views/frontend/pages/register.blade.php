@@ -10,8 +10,8 @@
                 <div class="col-12">
                     <div class="bread-inner">
                         <ul class="bread-list">
-                            <li><a href="{{route('home')}}">Home<i class="ti-arrow-right"></i></a></li>
-                            <li class="active"><a href="javascript:void(0);">Register</a></li>
+                            <li><a href="{{route('home')}}">หน้าหลัก<i class="ti-arrow-right"></i></a></li>
+                            <li class="active"><a href="javascript:void(0);">สมัครสมาชิก</a></li>
                         </ul>
                     </div>
                 </div>
