@@ -406,7 +406,7 @@
         <form-group>
             <input name="payment_method"  type="radio" value="cod" required> <label> เก็บเงินปลายทาง</label><br>
             <!-- <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label><br> -->
-            <input name="payment_method"  type="radio" value="paypal" required> <label> พร้อมเพย์ </label><br>
+            <input name="payment_method"  type="radio" value="cardpay" required> <label> พร้อมเพย์ </label><br>
             
             <!-- Credit Card Details -->
             <div id="creditCardDetails" style="display: none;">
