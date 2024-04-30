@@ -406,16 +406,14 @@
         <form-group>
             <input name="payment_method"  type="radio" value="cod" required> <label> เก็บเงินปลายทาง</label><br>
             <!-- <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label><br> -->
-            <input name="payment_method"  type="radio" value="cardpay" required> <label> โอนเข้าบัญชี</label><br>
+            <input name="payment_method"  type="radio" value="cardpay" required> <label> พร้อมเพย์ </label><br>
             
             <!-- Credit Card Details -->
             <div id="creditCardDetails" style="display: none;">
                 <div class="content">
-                    <img src="{{('backend/img/scb.jpg')}}" alt="#">
+                    <img src="{{('backend/img/rkk.png')}}" alt="#">
                 </div>
-                <div class="content">
-                   99999999999-9999999999999999
-                </div>
+               
             </div>
         </form-group>
     </div>
