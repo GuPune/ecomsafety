@@ -26,11 +26,12 @@
 						<div class="single-footer links">
 							<h4>ข้อมูลข่าวสาร</h4>
 							<ul>
-								<li><a href="{{route('about-us')}}">About Us</a></li>
-								<li><a href="#">Faq</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="{{route('contact')}}">Contact Us</a></li>
-								<li><a href="#">Help</a></li>
+								<li><a href="{{route('about-us')}}">เกี่ยวกับเรา</a></li>
+								<li><a href="#">คำถามที่พบย่อบ</a></li>
+								<li><a href="#">ข้อตกลงและเงื่อนไข
+								</a></li>
+								<li><a href="{{route('contact')}}">ติดต่อเรา</a></li>
+								<li><a href="#">ช่วยเหลือ</a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
