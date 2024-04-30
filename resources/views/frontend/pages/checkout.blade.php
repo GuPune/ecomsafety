@@ -411,7 +411,7 @@
             <!-- Credit Card Details -->
             <div id="creditCardDetails" style="display: none;">
                 <div class="content">
-                    <img src="{{('backend/img/rkk.png')}}" alt="#">
+                    <img src="{{('backend/img/rkk2.png')}}" alt="#">
                 </div>
                
             </div>
@@ -584,7 +584,7 @@
 				let subtotal = parseFloat( $('.order_subtotal').data('price') ); 
 				let coupon = parseFloat( $('.coupon_price').data('price') ) || 0; 
 				// alert(coupon);
-				$('#order_total_price span').text('$'+(subtotal + cost-coupon).toFixed(2));
+				$('#order_total_price span').text((subtotal + cost-coupon+'THB').toFixed(2));
 			});
 
 		});
