@@ -128,10 +128,10 @@ class OrderController extends Controller
         // }
         if (request('payment_method') == 'paypal') {
             $order_data['payment_method'] = 'paypal';
-            $order_data['payment_status'] = 'paid';
+            $order_data['payment_status'] = 'unpaid';
         } elseif (request('payment_method') == 'cardpay') {
             $order_data['payment_method'] = 'cardpay';
-            $order_data['payment_status'] = 'paid';
+            $order_data['payment_status'] = 'unpaid';
         } else {
             $order_data['payment_method'] = 'cod';
             $order_data['payment_status'] = 'Unpaid';
