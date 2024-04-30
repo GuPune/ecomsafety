@@ -30,13 +30,13 @@
 
                         <div class="col-lg-8 col-12">
                             <div class="checkout-form">
-                                <h2>Complete Your Purchase</h2>
-                                <p>Just a few more steps to complete your purchase securely!</p>
+                                <h2>ดำเนินการซื้อของคุณให้เสร็จสิ้น</h2>
+                                <p>เพียงไม่กี่ขั้นตอนเพื่อดำเนินการซื้อของคุณให้เสร็จสมบูรณ์อย่างปลอดภัย!</p>
                                 <!-- Form -->
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>First Name<span>*</span></label>
+                                            <label>ชื่อ<span>*</span></label>
                                             <input type="text" name="first_name" placeholder="" value="{{old('first_name')}}" value="{{old('first_name')}}" required>
                                             @error('first_name')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Last Name<span>*</span></label>
+                                            <label>นามสกุล<span>*</span></label>
                                             <input type="text" name="last_name" placeholder="" value="{{old('lat_name')}}" required>
                                             @error('last_name')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Email Address<span>*</span></label>
+                                            <label>อีเมล<span>*</span></label>
                                             <input type="email" name="email" placeholder="" value="{{old('email')}}" required>
                                             @error('email')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Phone Number <span>*</span></label>
+                                            <label>เบอร์โทร <span>*</span></label>
                                             <input type="number" name="phone" placeholder="" required value="{{old('phone')}}">
                                             @error('phone')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Country<span>*</span></label>
+                                            <label>ประเทศ<span>*</span></label>
                                             <select name="country" id="country" required>
                                                 <option value="TH" selected>Thailand</option>
                                                 {{-- <option value="AF">Afghanistan</option>
@@ -327,7 +327,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Address Line 1<span>*</span></label>
+                                            <label>ที่อยู่1<span>*</span></label>
                                             <input type="text" name="address1" placeholder="" value="{{old('address1')}}">
                                             @error('address1')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -336,7 +336,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Address Line 2</label>
+                                            <label>ที่อยู่2</label>
                                             <input type="text" name="address2" placeholder="" value="{{old('address2')}}">
                                             @error('address2')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -345,7 +345,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Postal Code</label>
+                                            <label>รหัสไปรษณีย์</label>
                                             <input type="text" name="post_code" placeholder="" value="{{old('post_code')}}">
                                             @error('post_code')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -361,12 +361,12 @@
                             <div class="order-details">
                                 <!-- Order Widget -->
                                 <div class="single-widget">
-                                    <h2>CART TOTAL</h2>
+                                    <h2>ยอดรวม</h2>
                                     <div class="content">
                                         <ul>
 										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>{{number_format(Helper::totalCartPrice(),2)}} THB</span></li>
                                             <li class="shipping">
-                                                Shipping Cost
+                                                ค่าใช้จ่ายในการจัดส่งสินค้า
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
                                                     <select name="shipping" class="nice-select" required>
                                                         <option value="">Select your address</option>
@@ -375,7 +375,7 @@
                                                         @endforeach
                                                     </select>
                                                 @else 
-                                                    <span>Free</span>
+                                                    <span>ฟรี</span>
                                                 @endif
                                             </li>
                                             
@@ -399,7 +399,7 @@
                                 <!--/ End Order Widget -->
                                 <!-- Order Widget -->
                                 <div class="single-widget">
-                                    <h2>Payment Methods</h2>
+                                    <h2>วิธีการชำระเงิน</h2>
                                     <div class="content">
     <div class="checkbox">
         {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
@@ -432,7 +432,7 @@
                                 <div class="single-widget get-button">
                                     <div class="content">
                                         <div class="button">
-                                            <button type="submit" class="btn">proceed to checkout</button>
+                                            <button type="submit" class="btn">ดำเนินการชำระเงิน</button>
                                         </div>
                                     </div>
                                 </div>
