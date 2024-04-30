@@ -413,6 +413,9 @@
                 <div class="content">
                     <img src="{{('backend/img/payment-method.png')}}" alt="#">
                 </div>
+                <div class="content">
+                   99999999999-9999999999999999
+                </div>
             </div>
         </form-group>
     </div>
