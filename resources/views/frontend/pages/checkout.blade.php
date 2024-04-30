@@ -74,7 +74,8 @@
                                         <div class="form-group">
                                             <label>Country<span>*</span></label>
                                             <select name="country" id="country" required>
-                                                <option value="AF">Afghanistan</option>
+                                                <option value="TH" selected>Thailand</option>
+                                                {{-- <option value="AF">Afghanistan</option>
                                                 <option value="AX">Åland Islands</option>
                                                 <option value="AL">Albania</option>
                                                 <option value="DZ">Algeria</option>
@@ -291,7 +292,7 @@
                                                 <option value="TW">Taiwan</option>
                                                 <option value="TJ">Tajikistan</option>
                                                 <option value="TZ">Tanzania</option>
-                                                <option value="TH">Thailand</option>
+                                                <option value="TH" selected>Thailand</option>
                                                 <option value="TL">Timor-Leste</option>
                                                 <option value="TG">Togo</option>
                                                 <option value="TK">Tokelau</option>
@@ -320,7 +321,8 @@
                                                 <option value="YE">Yemen</option>
                                                 <option value="ZM">Zambia</option>
                                                 <option value="ZW">Zimbabwe</option>
-                                            </select>
+                                            </select> --}}
+                                        </select> 
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
