@@ -53,7 +53,12 @@
                 
                 <div class="col-lg-1 col-md-1 col-12">
                     <!-- Logo -->
-           
+                    <div class="logo">
+                        @php
+                            $settings=DB::table('settings')->get();
+                        @endphp                    
+                        <a href="{{route('home')}}"><img src="@foreach($settings as $data) {{$data->logo}} @endforeach" alt="logo" height="60"></a>
+                    </div>
                     <!--/ End Logo -->
                     <!-- Search Form -->
                     <div class="search-top">
