@@ -1,7 +1,7 @@
 <header class="header shop">
     <!-- Topbar -->
-    <div class="topbar">
-        <div class="container">
+    <div class="topbar" hidden>
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-12">
                     <!-- Top Left -->
@@ -45,10 +45,13 @@
         </div>
     </div>
     <!-- End Topbar -->
-    <div class="middle-inner">
-        <div class="container">
+    <div class="middle-inner" style="background-color: #f58006">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-2 col-md-2 col-12">
+
+
+                
+                <div class="col-lg-1 col-md-1 col-12">
                     <!-- Logo -->
                     <div class="logo">
                         @php
@@ -69,26 +72,55 @@
                         </div>
                         <!--/ End Search Form -->
                     </div>
+
+                    
                     <!--/ End Search Form -->
                     <div class="mobile-nav"></div>
                 </div>
-                <div class="col-lg-8 col-md-7 col-12">
+
+                
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="cat-nav-head">
+                    <div class="menu-area">
+                        <!-- Main Menu -->
+                        <nav class="navbar navbar-expand">
+                            <div class="navbar-collapse">	
+                                <div class="nav-inner">	
+                                    <ul class="nav main-menu menu navbar-nav">
+                                        <li class="{{Request::path()=='home' ? 'active' : ''}}"><a href="{{route('home')}}">หน้าหลัก</a></li>
+                                        <li class="{{Request::path()=='about-us' ? 'active' : ''}}"><a href="{{route('about-us')}}">เกี่ยวกับเรา</a></li>
+                                        <li class="@if(Request::path()=='product-grids'||Request::path()=='product-lists')  active  @endif"><a href="{{route('product-grids')}}">สินค้า</a><span class="new">ใหม่</span></li>												
+                                            {{-- {{Helper::getHeaderCategory()}} --}}
+                                        {{-- <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">บล็อค</a></li>									 --}}
+                                           
+                                        <li class="{{Request::path()=='contact' ? 'active' : ''}}"><a href="{{route('contact')}}">ติดต่อเรา</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <!--/ End Main Menu -->	
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
                     <div class="search-bar-top">
                         <div class="search-bar">
-                            <select>
+                            {{-- <select>
                                 <option >ประเภททั้งหมด</option>
                                 @foreach(Helper::getAllCategory() as $cat)
                                     <option>{{$cat->title}}</option>
                                 @endforeach
-                            </select>
+                            </select> --}}
                             <form method="POST" action="{{route('product.search')}}">
                                 @csrf
                                 <input name="search" placeholder="Search Products Here....." type="search">
-                                <button class="btnn" type="submit"><i class="ti-search"></i></button>
+                                {{-- <button class="btnn" type="submit"><i class="ti-search"></i></button> --}}
                             </form>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-lg-2 col-md-3 col-12">
                     <div class="right-bar">
                         <!-- Search Form -->
@@ -181,14 +213,14 @@
         </div>
     </div>
     <!-- Header Inner -->
-    <div class="header-inner" style="background-color: #f58006">
+    <div class="header-inner" style="background-color: #f58006" hidden>
         <div class="container">
             <div class="cat-nav-head">
                 <div class="row">
                     <div class="col-lg-12 col-12">
-                        <div class="menu-area">
-                            <!-- Main Menu -->
-                            <nav class="navbar navbar-expand-lg">
+                        {{-- <div class="menu-area">
+                   
+                            <nav class="navbar navbar-expand">
                                 <div class="navbar-collapse">	
                                     <div class="nav-inner">	
                                         <ul class="nav main-menu menu navbar-nav">
@@ -203,8 +235,8 @@
                                     </div>
                                 </div>
                             </nav>
-                            <!--/ End Main Menu -->	
-                        </div>
+                        
+                        </div> --}}
                     </div>
                 </div>
             </div>
