@@ -126,8 +126,8 @@
                             <!-- Shopping Item -->
 
                             <div class="shopping-item">
-                                    <div class="dropdown-cart-header">
-                                        <span> Items</span>
+                                    <div class="dropdown">
+                                 
                                         <a href="{{route('wishlist')}}">View Wishlist</a>
                                     </div>
                                    
