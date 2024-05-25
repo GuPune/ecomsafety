@@ -128,7 +128,7 @@
                             <div class="shopping-item">
                                     <div class="dropdown-cart-header">
                                         <span> Items</span>
-                                        <a href="{{route('wishlist')}}">View Wishlist</a>
+                                        <a href="{{route('wishlist')}}">View Wishlist111</a>
                                     </div>
                                     <ul class="shopping-list">
                                     
