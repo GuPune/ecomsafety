@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-12">
                     <!-- Logo -->
-                    <div class="logo" style="height: 60px; width: 60px;">
+                    <div class="logo" style="height: 60px; width: 60px; margin-top: 4px;">
                         @php
                             $settings=DB::table('settings')->get();
                         @endphp                    
