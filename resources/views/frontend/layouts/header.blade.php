@@ -139,13 +139,7 @@
                                                     </li>
                                           
                                     </ul>
-                                    <div class="bottom">
-                                        <div class="total">
-                                            <span>Total</span>
-                                            <span class="total-amount">THB</span>
-                                        </div>
-                                        <a href="" class="btn animate">Cart</a>
-                                    </div>
+                                
                                 </div>
                             @auth
                                 <div class="shopping-item">
