@@ -127,9 +127,13 @@
 
                             <div class="shopping-item">
                                     <div class="dropdown-cart-header">
-                                        <span> Items</span>
-                                        <a href="{{route('wishlist')}}">View Wishlist</a>
+    
+                                        <a href="{{route('wishlist')}}">เข้าสู่ระบบ</a>
                                     </div>
+                                    <div class="dropdown-cart-header">
+    
+    <a href="{{route('wishlist')}}">สมัครสมาชิก</a>
+</div>
                                    
                                 
                                 </div>
