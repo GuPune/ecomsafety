@@ -122,6 +122,40 @@
                     <div class="right-bar">
                         <!-- Search Form -->
                         <div class="sinlge-bar shopping">
+                            <a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">{{Helper::cartCount()}}</span></a>
+                            <!-- Shopping Item -->
+                            @auth
+                                <div class="shopping-item">
+                                    <div class="dropdown-cart-header">
+                                        <span>{{count(Helper::getAllProductFromCart())}} Items</span>
+                                        <a href="{{route('cart')}}">View Cart</a>
+                                    </div>
+                                    <ul class="shopping-list">
+                                        {{-- {{Helper::getAllProductFromCart()}} --}}
+                                            @foreach(Helper::getAllProductFromCart() as $data)
+                                                    @php
+                                                        $photo=explode(',',$data->product['photo']);
+                                                    @endphp
+                                                    <li>
+                                                        <a href="{{route('cart-delete',$data->id)}}" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+                                                        <a class="cart-img" href="#"><img src="{{$photo[0]}}" alt="{{$photo[0]}}"></a>
+                                                        <h4><a href="{{route('product-detail',$data->product['slug'])}}" target="_blank">{{$data->product['title']}}</a></h4>
+                                                        <p class="quantity">{{$data->quantity}} x - <span class="amount">{{number_format($data->price,2)}} THB</span></p>
+                                                    </li>
+                                            @endforeach
+                                    </ul>
+                                    <div class="bottom">
+                                        <div class="total">
+                                            <span>Total</span>
+                                            <span class="total-amount">{{number_format(Helper::totalCartPrice(),2)}} THB</span>
+                                        </div>
+                                        <a href="{{route('checkout')}}" class="btn animate">Checkout</a>
+                                    </div>
+                                </div>
+                            @endauth
+                            <!--/ End Shopping Item -->
+                        </div>
+                        <div class="sinlge-bar shopping">
                             @php 
                                 $total_prod=0;
                                 $total_amount=0;
@@ -134,7 +168,6 @@
                                     @endphp
                                 @endforeach
                            @endif
-                           <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o"></i> <span class="total-count">{{Helper::wishlistCount()}}</span></a>
                             <a href="{{route('wishlist')}}" class="single-icon"><i class="fa fa-heart-o"></i> <span class="total-count">{{Helper::wishlistCount()}}</span></a>
                             <!-- Shopping Item -->
                             @auth
