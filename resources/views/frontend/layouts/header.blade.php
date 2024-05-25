@@ -45,12 +45,9 @@
         </div>
     </div>
     <!-- End Topbar -->
-    <div class="middle-inner" style="background-color: #f58006">
+    <div class="middle-inner" style="background-color: #f58006;padding:0px;">
         <div class="container-fluid">
             <div class="row">
-
-
-                
                 <div class="col-lg-1 col-md-1 col-12">
                     <!-- Logo -->
                     <div class="logo" style="height: 60px; width: 60px;">
