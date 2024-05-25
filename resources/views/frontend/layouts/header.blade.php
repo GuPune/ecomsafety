@@ -110,7 +110,7 @@
                             </select> --}}
                             <form method="POST" action="{{route('product.search')}}">
                                 @csrf
-                                <input name="search" placeholder="Search Products Here....." type="search">
+                                <input name="search" placeholder="Search" type="search">
                                 {{-- <button class="btnn" type="submit"><i class="ti-search"></i></button> --}}
                             </form>
                         </div>
