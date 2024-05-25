@@ -1,6 +1,6 @@
 <header class="header shop">
     <!-- Topbar -->
-    <div class="topbar" hidden>
+    <div class="topbar">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-12">
