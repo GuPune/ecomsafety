@@ -125,7 +125,7 @@
                             <a href="{{route('cart')}}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">{{Helper::cartCount()}}</span></a>
                             <!-- Shopping Item -->
 
-                            <div class="shopping">
+                            <div class="shopping-item">
                                     <div class="dropdown">
                                  
                                         <a href="{{route('wishlist')}}">View Wishlist</a>
