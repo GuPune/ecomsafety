@@ -113,7 +113,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>สินค้าใหม่</h2>
+                        <h2>สินค้าแนะนำ</h2>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
         $recentlyAddedProducts = DB::table('products')
             ->where('status', 'active')
             ->orderBy('created_at', 'desc')
-            ->take(36) // Get the 8 most recently added products
+            ->take(4) // Get the 8 most recently added products
             ->get();
     @endphp
 
@@ -303,10 +303,10 @@
                 </div>
                 <div class="row">
                     @php
-                        $product_lists=DB::table('products')->where('status','active')->orderBy('id','DESC')->limit(6)->get();
+                        $product_lists=DB::table('products')->where('status','active')->orderBy('id','DESC')->limit(4)->get();
                     @endphp
                     @foreach($product_lists as $product)
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <!-- Start Single List  -->
                             <div class="single-list">
                                 <div class="row">
