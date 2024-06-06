@@ -241,12 +241,12 @@
         </div>
     </div>
     <!-- Header Inner -->
-    <div class="header-inner" style="background-color: #f58006" hidden>
+    {{-- <div class="header-inner" style="background-color: #f58006">
         <div class="container">
             <div class="cat-nav-head">
                 <div class="row">
                     <div class="col-lg-12 col-12">
-                        {{-- <div class="menu-area">
+                        <div class="menu-area">
                    
                             <nav class="navbar navbar-expand">
                                 <div class="navbar-collapse">	
@@ -264,12 +264,12 @@
                                 </div>
                             </nav>
                         
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--/ End Header Inner -->
 </header>
 
