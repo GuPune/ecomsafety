@@ -76,7 +76,7 @@
                 </div>
 
                 
-                <div class="col-lg-5 col-md-5 col-12">
+                <div class="col-lg-5 col-md-5 col-12" hidden>
                     <div class="cat-nav-head">
                     <div class="menu-area">
                         <!-- Main Menu -->
