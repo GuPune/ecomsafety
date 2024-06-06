@@ -118,7 +118,7 @@
                 </div>
 
 
-                <div class="col-lg-2 col-md-3 col-12">
+                <div class="col-lg-3 col-md-3 col-12">
                     <div class="right-bar">
                         <!-- Search Form -->
                         <div class="sinlge-bar shopping">
