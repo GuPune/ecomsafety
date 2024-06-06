@@ -76,7 +76,7 @@
                 </div>
 
                 
-                <div class="col-lg-5 col-md-5 col-12" style="display: none">
+                <div class="col-lg-5 col-md-5 col-12" style="mogt">
                     <div class="cat-nav-head">
                     <div class="menu-area">
                         <!-- Main Menu -->
@@ -277,5 +277,9 @@
     .shopping-item-x {
        width: 200px!important;
   
+}
+
+.mogt{
+    display: none;
 }
     </style>
