@@ -592,9 +592,12 @@
         function handleClick(myRadio) {
 
     var element = document.getElementById("creditCardDetails");
+
     if (myRadio.value == "paypal") {
+        console.log('if');
         element.style.display = "block";
     } else {
+        console.log('else');
         element.style.display = "none";
     }
 
