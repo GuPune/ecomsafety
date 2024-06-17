@@ -409,7 +409,7 @@
             <input name="payment_method"  type="radio" value="paypal" required> <label> พร้อมเพย์ </label><br>
             
             <!-- Credit Card Details -->
-            <div id="creditCardDetails" style="display: none;">
+            <div id="creditCardDetails">
                 <div class="content">
                     <img src="{{('backend/img/rkk2.png')}}" alt="#">
                 </div>
