@@ -591,6 +591,8 @@
 
         function handleClick(myRadio) {
 console.log(myRadio.value);
+
+$('#creditCardDetails').css('display','none');
 }
 
 	</script>
