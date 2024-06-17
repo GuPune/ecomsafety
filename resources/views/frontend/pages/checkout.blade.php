@@ -590,7 +590,7 @@
 		});
 
         function handleClick(myRadio) {
-console.log(myRadio);
+console.log(myRadio.value);
 }
 
 	</script>
