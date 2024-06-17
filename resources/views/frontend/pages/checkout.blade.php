@@ -409,7 +409,7 @@
             <input name="payment_method"  type="radio" value="paypal"  onclick="handleClick(this);" required> <label> พร้อมเพย์ </label><br>
             
             <!-- Credit Card Details -->
-            <div id="creditCardDetails" style="display: none;">
+            <div id="creditCardDetails">
                 <div class="content">
                     <img src="{{('backend/img/rkk2.png')}}" alt="#">
                 </div>
@@ -594,7 +594,7 @@
     var element = document.getElementById("creditCardDetails");
 
     if (myRadio.value == "paypal") {
-        console.log('if');
+      
         element.style.display = "block";
     } else {
         console.log('else');
