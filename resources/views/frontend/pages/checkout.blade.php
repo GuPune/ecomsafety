@@ -417,11 +417,9 @@
             </div>
 
             <div>
-                <label for="file-upload">Upload a file:</label>
-                <input type="file" id="file-upload" name="file">
-               
+                <label for="file-upload">สลิปโอนเงิน</label>
+                <input type="file" id="file-upload" name="file"> 
             </div>
-      
         </form-group>
 
     </div>
