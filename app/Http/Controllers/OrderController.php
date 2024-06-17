@@ -45,7 +45,7 @@ class OrderController extends Controller
     public function store(Request $request)
     {
 
-        dd($request->all());
+  
         $this->validate($request,[
             'first_name'=>'string|required',
             'last_name'=>'string|required',
@@ -54,9 +54,13 @@ class OrderController extends Controller
             'coupon'=>'nullable|numeric',
             'phone'=>'numeric|required',
             'post_code'=>'string|nullable',
-            'email'=>'string|required'
+            'email'=>'string|required',
+            'file' => 'required|file|mimes:jpg,jpeg,png,gif,webp|max:2048', // Adjust validation rules as needed
         ]);
         // return $request->all();
+
+        $file = $request->file('file');
+        $path = $file->store('uploads', 'public');
 
         if(empty(Cart::where('user_id',auth()->user()->id)->where('order_id',null)->first())){
             request()->session()->flash('error','Cart is Empty !');
