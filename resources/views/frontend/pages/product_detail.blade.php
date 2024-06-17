@@ -142,7 +142,7 @@
 														<button type="submit" class="btn">Add to cart</button>
 														<a href="{{route('add-to-wishlist',$product_detail->slug)}}" class="btn min"><i class="ti-heart"></i></a>
 													</div>
-												</form>
+											
 
 												<p class="cat">Category :<a href="{{route('product-cat',$product_detail->cat_info['slug'])}}">{{$product_detail->cat_info['title']}}</a></p>
 												@if($product_detail->sub_cat_info)
@@ -161,11 +161,18 @@
     @endif
 </p>
 
+<div class="add-to-cart mt-4">
+	<button type="submit" class="btn">Add to cart</button>
+	<a href="{{route('checkout')}}"  class="btn">  Buy</a>
+</div>
+</form>
 											</div>
 											<!--/ End Product Buy -->
 											<!-- Visit 'codeastro' for more projects -->
 										</div>
 									</div>
+
+									
 								</div>
 								<div class="row">
 									<div class="col-12">

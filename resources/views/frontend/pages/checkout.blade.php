@@ -24,7 +24,7 @@
     <!-- Start Checkout -->
     <section class="shop checkout section">
         <div class="container">
-                <form class="form" method="POST" action="{{route('cart.order')}}">
+                <form class="form" method="POST" action="{{route('cart.order')}}"  >
                     @csrf
                     <div class="row"> 
 
@@ -366,9 +366,9 @@
                                         <ul>
 										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>{{number_format(Helper::totalCartPrice(),2)}} THB</span></li>
                                             <li class="shipping">
-                                                ค่าใช้จ่ายในการจัดส่งสินค้า
+                                                ค่าใช้จ่ายในการจัดส่งสินค้า    <span style="color: red">*เลือกบริการจัดส่ง</span>
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
-                                                    <select name="shipping" class="nice-select" required>
+                                                    <select name="shipping" class="nice-select">
                                                         <option value="">Select your address</option>
                                                         @foreach(Helper::shipping() as $shipping)
                                                         <option value="{{$shipping->id}}" class="shippingOption" data-price="{{$shipping->price}}">{{$shipping->type}}: {{$shipping->price}} THB</option>
@@ -378,7 +378,7 @@
                                                     <span>ฟรี</span>
                                                 @endif
                                             </li>
-                                            
+                                         
                                             @if(session('coupon'))
                                             <li class="coupon_price" data-price="{{session('coupon')['value']}}">You Save<span>${{number_format(session('coupon')['value'],2)}}</span></li>
                                             @endif
@@ -601,6 +601,13 @@
             }
         });
     });
+
+
+    function validateForm() {
+
+alert('select');
+        return false;
+}
 </script>
 
 @endpush
