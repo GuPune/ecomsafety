@@ -416,7 +416,7 @@
                
             </div>
 
-            <div id="creditCardDetails" style="display: none;">
+            <div>
                 <label for="file-upload">Upload a file:</label>
                 <input type="file" id="file-upload" name="file">
                
