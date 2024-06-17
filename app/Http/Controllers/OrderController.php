@@ -55,7 +55,6 @@ class OrderController extends Controller
             'phone'=>'numeric|required',
             'post_code'=>'string|nullable',
             'email'=>'string|required',
-            'file' => 'required|file|mimes:jpg,jpeg,png,gif,webp|max:2048', // Adjust validation rules as needed
         ]);
         // return $request->all();
 
