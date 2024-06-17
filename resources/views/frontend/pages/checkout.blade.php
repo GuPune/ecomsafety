@@ -404,12 +404,12 @@
     <div class="checkbox">
         {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
         <form-group>
-            <input name="payment_method"  type="radio" value="cod"  onclick="handleClick(this);" required> <label> เก็บเงินปลายทาง</label><br>
+            <input name="payment_method"  type="radio" value="cod"  required> <label> เก็บเงินปลายทาง</label><br>
             <!-- <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label><br> -->
-            <input name="payment_method"  type="radio" value="paypal"  onclick="handleClick(this);" required> <label> พร้อมเพย์ </label><br>
+            <input name="payment_method"  type="radio" value="paypal"  required> <label> พร้อมเพย์ </label><br>
             
             <!-- Credit Card Details -->
-            <div id="creditCardDetails">
+            <div id="creditCardDetails" style="display: none;">
                 <div class="content">
                     <img src="{{('backend/img/rkk2.png')}}" alt="#">
                 </div>
@@ -589,26 +589,26 @@
 
 		});
 
-        function handleClick(myRadio) {
+//         function handleClick(myRadio) {
 
-    var element = document.getElementById("creditCardDetails");
+//     var element = document.getElementById("creditCardDetails");
 
-    if (myRadio.value == "paypal") {
+//     if (myRadio.value == "paypal") {
       
-        element.style.display = "block";
-    } else {
-        console.log('else');
-        element.style.display = "none";
-    }
+//         element.style.display = "block";
+//     } else {
+//         console.log('else');
+//         element.style.display = "none";
+//     }
 
-}
+// }
 
 	</script>
 
 <script>
     $(document).ready(function() {
         $('input[name="payment_method"]').change(function() {
-            if ($(this).val() === 'cardpay') {
+            if ($(this).val() === 'paypal') {
                 $('#creditCardDetails').show();
             } else {
                 $('#creditCardDetails').hide();
