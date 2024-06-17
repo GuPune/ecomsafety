@@ -62,6 +62,7 @@ class OrderController extends Controller
         $file = $request->file('file');
 
         $path = $file->store('files', 'public');
+  
 
         if(empty(Cart::where('user_id',auth()->user()->id)->where('order_id',null)->first())){
             request()->session()->flash('error','Cart is Empty !');
@@ -101,6 +102,7 @@ class OrderController extends Controller
         $order_data['user_id']=$request->user()->id;
         $order_data['shipping_id']=$request->shipping;
         $shipping=Shipping::where('id',$order_data['shipping_id'])->pluck('price');
+        $order_data['slip']= $path;
         // return session('coupon')['value'];
         $order_data['sub_total']=Helper::totalCartPrice();
         $order_data['quantity']=Helper::cartCount();
