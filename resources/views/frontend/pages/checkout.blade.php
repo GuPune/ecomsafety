@@ -590,9 +590,14 @@
 		});
 
         function handleClick(myRadio) {
-console.log(myRadio.value);
 
-$('#creditCardDetails').css('display','block');
+    var element = document.getElementById("creditCardDetails");
+    if (myRadio.value == "paypal") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+
 }
 
 	</script>
