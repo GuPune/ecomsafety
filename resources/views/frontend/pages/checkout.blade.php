@@ -592,7 +592,7 @@
         function handleClick(myRadio) {
 console.log(myRadio.value);
 
-$('#creditCardDetails').css('display','none');
+$('#creditCardDetails').css('display','block');
 }
 
 	</script>
