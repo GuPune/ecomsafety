@@ -404,12 +404,12 @@
     <div class="checkbox">
         {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
         <form-group>
-            <input name="payment_method"  type="radio" value="cod" required> <label> เก็บเงินปลายทาง</label><br>
+            <input name="payment_method"  type="radio" value="cod"  onclick="handleClick(this);" required> <label> เก็บเงินปลายทาง</label><br>
             <!-- <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label><br> -->
-            <input name="payment_method"  type="radio" value="paypal" required> <label> พร้อมเพย์ </label><br>
+            <input name="payment_method"  type="radio" value="paypal"  onclick="handleClick(this);" required> <label> พร้อมเพย์ </label><br>
             
             <!-- Credit Card Details -->
-            <div id="creditCardDetails">
+            <div id="creditCardDetails" style="display: none;">
                 <div class="content">
                     <img src="{{('backend/img/rkk2.png')}}" alt="#">
                 </div>
@@ -588,6 +588,10 @@
 			});
 
 		});
+
+        function handleClick(myRadio) {
+console.log(myRadio);
+}
 
 	</script>
 
