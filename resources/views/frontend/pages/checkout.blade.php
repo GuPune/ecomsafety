@@ -419,14 +419,10 @@
    
         </form-group>
 
-                 <div class="input-group mb-3">
-                    <form>
-                        <div class="form-group">
-                          <label for="exampleFormControlFile1">Example file input</label>
-                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                      </form>
-              </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Upload Slip</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
     </div>
 </div>
 
