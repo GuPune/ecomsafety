@@ -416,13 +416,14 @@
                
             </div>
 
-   
+            <div id="creditCardDetails" style="display: none;">
+                <label for="file-upload">Upload a file:</label>
+                <input type="file" id="file-upload" name="file">
+               
+            </div>
+      
         </form-group>
 
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Upload Slip</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
     </div>
 </div>
 
