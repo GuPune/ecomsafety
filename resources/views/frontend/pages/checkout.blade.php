@@ -413,13 +413,15 @@
                 <div class="content">
                     <img src="{{('backend/img/rkk2.png')}}" alt="#">
                 </div>
+
+                <div>
+                    <label for="file-upload">สลิปโอนเงิน</label>
+                    <input type="file" id="file-upload" name="file"> 
+                </div>
                
             </div>
 
-            <div>
-                <label for="file-upload">สลิปโอนเงิน</label>
-                <input type="file" id="file-upload" name="file"> 
-            </div>
+        
         </form-group>
 
     </div>
