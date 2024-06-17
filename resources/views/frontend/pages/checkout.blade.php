@@ -24,7 +24,7 @@
     <!-- Start Checkout -->
     <section class="shop checkout section">
         <div class="container">
-                <form class="form" method="POST" action="{{route('cart.order')}}"  >
+                <form class="form" method="POST" action="{{route('cart.order')}}"  enctype="multipart/form-data" >
                     @csrf
                     <div class="row"> 
 
