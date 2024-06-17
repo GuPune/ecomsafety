@@ -60,7 +60,7 @@ class OrderController extends Controller
         // return $request->all();
 
         $file = $request->file('file');
-        dd($file);
+
         $path = $file->store('files', 'public');
 
         if(empty(Cart::where('user_id',auth()->user()->id)->where('order_id',null)->first())){
