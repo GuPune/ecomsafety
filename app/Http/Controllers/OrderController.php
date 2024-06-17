@@ -44,6 +44,8 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+
+        dd($request->all());
         $this->validate($request,[
             'first_name'=>'string|required',
             'last_name'=>'string|required',
