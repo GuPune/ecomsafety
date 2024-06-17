@@ -416,8 +416,8 @@
 
                 <div>
                     <label for="file-upload">สลิปโอนเงิน</label>
-                 
-                    <input type="file" name="file">
+                    <input type="file" id="file-upload" name="file"> 
+                
                 </div>
                
             </div>
