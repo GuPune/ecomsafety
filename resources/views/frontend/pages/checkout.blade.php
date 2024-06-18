@@ -416,7 +416,7 @@
 
                 <div>
                     <label for="file-upload">สลิปโอนเงิน</label>
-                    <input type="file" id="file-upload" name="file"> 
+                    <input type="file" id="file-upload" name="file" required> 
                 
                 </div>
                
