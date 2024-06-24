@@ -30,12 +30,12 @@
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
-							<h3>Welcome To <span>Ecommerce Laravel</span></h3>
+							<h3>ABOUT <span>US</span></h3>
 							<p>@foreach($settings as $data) {{$data->description}} @endforeach</p>
-							<div class="button">
+							{{-- <div class="button">
 								<a href="{{route('blog')}}" class="btn">Our Blog</a>
 								<a href="{{route('contact')}}" class="btn primary">Contact Us</a>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 					<div class="col-lg-6 col-12">
